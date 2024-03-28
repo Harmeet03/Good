@@ -5,7 +5,7 @@ function cart(){
 
 // -------- FOR HOODIES ---------
 function b1(){
-    window.location = "../../Frontend/Hoodies/Product1.html";
+    window.location = "../../Good/Frontend/Hoodies/Product1.html";
 }
 function b2(){
     window.location = "../../Frontend/Hoodies/Product2.html";
