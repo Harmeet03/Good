@@ -1,0 +1,467 @@
+body{
+    font-family: "Oswald", sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    color: red;
+    text-align: center;
+}
+
+/* ---------- NAVBAR FOR PC ---------------- */
+nav{
+    justify-content: center;
+    text-align: center;
+    width: 1000px;
+    margin: auto;
+}
+
+
+nav > .links > h1{
+    font-size: 100px;
+    font-family: "Dancing Script", sans-serif;
+    margin-top: 20px;
+}
+
+nav > .links > .list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    color: red;
+}
+
+nav a{
+    color: red;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+nav > .cart{
+    display: flex;
+    margin-top: 20px;
+    padding: 0px 40px;
+    justify-content: right;
+}
+
+nav > .cart > i{
+    font-size: 48px;
+    color: red; 
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px){
+    nav{
+        width: 500px;
+    }
+}
+
+/* ---------- PRODUCTS FOR PC ----------------- */
+.products{
+    padding: 40px 0px;
+    width: 1250px;
+    margin: auto;
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (max-width: 1250px){
+    .products{
+        width: 1000px;
+    }
+    
+    .items{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .products{
+        width: 500px;
+    }
+    .items{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.items img{
+    width: 384px;
+    height: 512px;
+}
+
+.items .button{
+    position: absolute;
+    margin: 225px 0px 0px 135px;
+    background-color: red;
+    color: black;
+    border: none;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 4px;
+    display: none;
+}
+
+.items .button:hover{
+    background-color: rgb(234, 23, 23);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.items > div:hover .button{
+    display: block;
+}
+
+.items > div:hover{
+    cursor: pointer;
+}
+
+/* ---------- ABOUT FOR PC -------------------- */
+.about{
+    font-size: 20px;
+    line-height: 40px;
+    width: 800px;
+    margin: auto;
+    padding: 40px 0px;
+
+}
+
+.conc > div > .h1{
+    font-size: 80px;
+    font-family: "Dancing Script", sans-serif;  
+}
+
+.conc > div{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    text-align: left;
+    gap: 100px;
+    width: 1200px;
+    
+}
+
+.conc{
+    width: 1200px;
+    margin: auto;
+    padding: 40px 0px 100px 0px;
+}
+
+@media only screen and (max-width: 800px){
+    .about{
+        width: 500px;
+        font-size: 30px;
+        line-height: 60px;
+    }
+
+    .conc{
+        display: none;
+    }    
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .conc{
+        width: 800px;
+    }
+    
+    .conc > div{
+        flex-direction: column;
+        gap: 0px;
+        text-align: center;
+        width: 800px;
+    }
+
+    .conc > div > .p{
+        margin: -200px 0px 0px 0px;
+    }
+}
+
+.conc > div > .p{
+    padding: 120px 0px 0px 0px;
+    font-size: 20px;
+}
+
+.form > input{
+    border-color: red;
+    background-color: black;
+    color: red;
+    padding: 15px 50px;
+    font-size: medium;
+}
+
+
+.form > input::placeholder{
+    color: rgb(206, 43, 43);
+}
+
+.form > button{
+    background-color: red;
+    color: black;
+    border: none;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.form > button:hover{
+    background-color: rgb(234, 23, 23);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.conc > h1{
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.conc > p{
+    font-size: 26px;
+}
+
+/* ---------- FOOTER FOR PC ----------------- */
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 200px;
+    width: 800px;
+    margin: auto;
+    border-top: 1px solid red;
+
+    
+}
+
+@media only screen and (max-width: 1200px){
+    .footer{
+        padding: 20px 0px;
+    }
+
+    .footer > .links{
+        gap: 0px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .footer{
+        flex-direction: column;
+        gap: 40px;
+        width: 500px;
+    }
+    
+    .footer > .links{
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .footer > .social{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .footer > .links > a{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.footer > .links{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.footer > .links > a{
+    color: red;
+    text-decoration: none;
+}
+
+.footer > .social{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+/* ------------ FOR EACH PRODUCTS DETAILS ------------------- */
+/* ----------- SLIDER FOR SHOWING PRODUCTS IMAGES ----------- */
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container > .mySlides {
+    display: none;   
+}
+
+.slideshow-container > .mySlides > img {
+    width: 600px;
+    height: 755px;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+.details{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    margin: auto;
+    gap: 100px;
+}
+
+@media only screen and (max-width: 1250px){
+    .details{
+        flex-direction: column;
+        width: 600px;
+        padding: 40px 0px;
+    }
+}
+
+.details > .desc{
+    text-align: left;
+    font-size: 20px;
+    margin-top: 80px;
+    padding: 0px 0px 80px 0px;
+}
+
+@media only screen and (max-width: 650px){
+    .slideshow-container > .mySlides > img {
+        width: 400px;
+        height: 600px;
+    }
+
+    .details{
+        width: 500px;
+    }
+
+    .details > .desc{
+        padding: 0px 0px 40px 20px;
+    }
+}
+
+.details > .desc > .size{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0px 0px 40px 0px;
+    border-bottom: 2px solid rgb(129, 18, 18);
+}
+
+.details > .desc > .size > label{
+    border: 2px solid red;
+    padding: 16px;
+    border-radius: 6px;
+    width: 20px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.details > .desc > .size > label:hover{
+    cursor: pointer;
+}
+
+.details > .desc > .q{
+    padding: 40px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.details > .desc > .q > select{
+    padding: 16px;
+    border: 2px solid rgb(129, 18, 18);
+    border-radius: 6px;
+    background-color: black;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.details > .desc > .q > button{
+    border-radius: 6px;
+    background-color: red;
+    color: black;
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 0px 20px;
+    border: none;
+}
+
+.details > .desc > .q > button:hover{
+    background-color: rgb(234, 23, 23);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.details > .desc > .md > div > div > a{
+    color: red;
+}
+
+.details > .desc > .md{
+    padding: 20px 0px 0px 0px;
+    position:static;
+}
+
+
+.details > .desc > .md > div{
+    border-bottom: 2px solid rgb(129, 18, 18);
+}
+
+.details > .desc > .md > div:nth-child(3){
+    border: none;
+}
+
+.details > .desc > .md > div > h4{
+    cursor: pointer;
+}
+
+.details > .desc > .md > div > div{
+    display: none;
+}

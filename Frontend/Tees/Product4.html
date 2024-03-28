@@ -1,0 +1,193 @@
+<html>
+    <head>
+        <link href="../index.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> PRODUCT4 | Good </title>
+        <link rel="icon" type="image/x-icon" href="../GOOD.png">
+        <script src="../index.js"></script>
+
+    </head>
+    <nav>
+        <div class="links">
+            <h1> Good </h1>
+            <div class="list">
+                <a href="../index.html"> HOME </a>
+                <a href="../Hoodies/Hoodies.html"> HOODIES </a>
+                <a href="../Tees/Tees.html"> TEES </a>
+                <a href="../Accessories/Accessories.html"> ACCESSORIES </a>
+            </div>
+        </div>
+    </nav>
+    <body>
+        <div class="details">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="">
+                </div>
+                <div class="mySlides fade">
+                    <img src="#">
+                </div>
+                <div class="mySlides fade">
+                    <img src="#">
+                </div>
+                <div class="dots" style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+            </div>
+            <div class="desc">
+                <h1> PRODUCT4 </h1>
+                <p class="p"> ₹ 800 </p>
+                <p> Products Detail </p>
+                <p> Select Size </p>
+                <div class="size">
+                    <label onclick="s1()"> S </label>
+                    <label onclick="s2()"> M </label>
+                    <label onclick="s3()"> L </label>
+                    <label onclick="s4()"> XL </label>
+                    <label onclick="s5()"> 2XL </label>
+                </div>
+                <div class="q">
+                    <select>
+                        <option> 1 </option>
+                        <option> 2 </option>
+                        <option> 3 </option>
+                        <option> 4 </option>
+                        <option> 5 </option>
+                        <option> 6 </option>
+                        <option> 7 </option>
+                        <option> 8 </option>
+                        <option> 9 </option>
+                        <option> 10+ </option>
+                    </select>
+                    <button type="button" onclick="send()"> Buy Now </button>
+                </div>
+                <div class="md">
+                    <div>
+                        <h4 onclick="md1()"> MORE DETAILS<span style="color: black;">-------------------------------------------------------------------</span>+ </h4>
+                        <div id="md1">
+                            <li> 80% cotton, 20% polyester blend fleece </li>
+                            <li> Midweight fabric (8.5oz) </li>
+                            <li> Regular fit </li>
+                            <li> Unisex sizing </li>
+                            <br>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 onclick="md2()"> SIZE & FIT<span style="color: black;">------------------------------------------------------------------------</span>+ </h4>
+                        <div id="md2">
+                            <a href="#"> View size chart </a>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 onclick="md3()"> QUALITY GUARANTEE & RETURNS<span style="color: black;">-------------------------------------------</span>+ </h4>
+                        <div id="md3">
+                            <li> Quality is guaranteed. If there is a print error or visible quality issue, we'll replace or refund it.</li>
+                            <li> Because the products are made to order, we do not accept general returns or sizing-related returns. </li>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products">
+            <h1> YOU MAY ALSO LIKE </h1>
+            <div class="items">
+                <div class="p1">
+                    <button class="button" type="button" onclick="b1()"> See More </button>
+                    <img src="#" alt="Not Available">
+                    <h2>PRODUCT1</h2>
+                    <p> ₹ 800</p>
+                </div>
+                <div class="p2">
+                    <button class="button" type="button" onclick="b2()"> See More </button>
+                    <img src="#" alt="Not Available">
+                    <h2>PRODUCT1</h2>
+                    <p> ₹ 800</p>
+                </div>
+                <div class="p3">
+                    <button class="button" type="button" onclick="b3()"> See More </button>
+                    <img src="#" alt="Not Available">
+                    <h2>PRODUCT1</h2>
+                    <p> ₹ 800</p>
+                </div>
+                <div class="p4">
+                    <button class="button" type="button" onclick="b4()"> See More </button>
+                    <img src="#" alt="Not Available">
+                    <h2>PRODUCT1</h2>
+                    <p> ₹ 800</p>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="footer">
+            <div class="links">
+                <a href="../Pages/terms-of-service.html"> TERMS OF SERVICE </a>
+                <a href="../Pages/privacy-policy.html"> PRIVACY POLICY </a>
+                <a href="mailto:hsdhanjal2003@gmail.com"> CONTACT </a>
+            </div>
+            <div class="social">
+                <a class="fa fa-twitter fa-2x "></a>
+                <a class="fa fa-instagram fa-2x"></a>
+                <a class="fa fa-youtube fa-2x"></a>
+            </div>
+        </div>
+        <h4> © 2024 'GOOD' CLOTHES BY HARMEET </h1>
+    </footer>
+
+    <script>
+        /* ----------- SLIDER FOR SHOWING PRODUCTS IMAGES ----------- */
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <!-- SCRIPT FOR ADD TO CART (OR SIMILAR TO THAT) -->
+    <script>
+        function send(){
+            let item = document.querySelector(".desc > h1").innerHTML;
+            let q = document.querySelector(".q > select").value;
+            let price = parseInt(document.querySelector(".p").innerText.replace("₹ ", ""));
+    
+            let arr = JSON.parse(localStorage.getItem("TProduct4")) || [];
+            
+            let obj = {
+                Product: item,
+                Quantity: parseInt(q),
+                Price: price,
+                Total: price * parseInt(q) + parseInt(100)
+            };
+    
+            arr.push(obj);
+            
+            localStorage.setItem("TProduct4", JSON.stringify(arr));
+            window.location = "../../Frontend/Tees/Buy4.html"
+        }
+    </script>
+</html>

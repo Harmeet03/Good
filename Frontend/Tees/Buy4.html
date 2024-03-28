@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <link href="../Buy.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width">
+        <title> Checkout | Good </title>
+        <link rel="icon" type="image/x-icon" href="GOOD.png">
+        <script src="../index.js"></script>
+    </head>
+    <body>
+        <div>
+            <div class="left">
+                <nav>
+                    <div class="links">
+                        <h1> Good </h1>
+                    </div>
+                </nav>
+                <form action="#" class="form" id="myForm" method="POST">
+                    <div id="nError" style="display: none;">
+                        <h4> Failed to connect to server! Pease try later.</h4>
+                    </div>
+                    <h2> CONTACT INFORMATION </h2>
+                    <input name="email" class="input" type="email" placeholder="E-mail address"><br><br>
+                    <h2> SHIPPING ADDRESS </h2>
+                    <input name="fname" class="input" type="text" placeholder="Full name" required><br><br>
+                    <input name="address" class="input" type="text" placeholder="Street address" required><br><br>
+                    <input class="input" type="text" placeholder="Apartment"><br><br>
+                    <input name="city" class="input" type="text" placeholder="City" required><br><br>
+                    <div>
+                        <select required>
+                            <option> India </option>
+                            <option> USA </option>
+                            <option> UK </option>
+                            <option> Japan </option>
+                            <option> China </option>
+                            <option> France </option>
+                            <option> Italy </option>
+                            <option> Greece </option>
+                            <option> Spain </option>
+                            <option> Ireland </option>
+                        </select>
+                        <input name="state" type="text" placeholder="State/province" required>
+                        <input name="pcode" type="number" placeholder="Postal code" required>
+                    </div><br>
+                    <input name="pno" class="input" type="number" maxlength="10" placeholder="Phone number" required>
+                    <p> The shipping carrier for this order requires a contact number </p><br><br>
+                    <button type="submit" class="button"> Continue to Payment </button>
+                </form>
+            </div>
+            <div class="right">
+                <img src="#" alt="Not Available">
+                <h3> </h3>
+                <p id="q"> </p>
+                <p id="price"> </p>
+                <div class="total">
+                    <h3 style="text-align: left;"> Subtotal -<span style="color: rgb(44, 16, 16);">-------------------------------------</span> <span class="subtotal" id="total"> </span> </h3>
+                    <h3 style="text-align: left;"> Shipping -<span style="color: rgb(44, 16, 16);">------------------------------------------</span> <span class="shipping" id="total"> ₹ 50 </span> </h3>
+                    <h3 style="text-align: left;"> Taxes -<span style="color: rgb(44, 16, 16);">----------------------------------------------</span> <span class="taxes" id="total"> ₹ 50 </span> </h3>
+                    <h3 style="text-align: left;"> TOTAL -<span style="color: rgb(44, 16, 16);">------------------------------------------</span> <span class="totall" id="total"> </span> </h3>
+                </div>
+            </div>
+        </div>
+        <script src="../form.js"></script>
+        <!-- SCRIPT FOR ADD TO CART (OR SIMILAR TO THAT) -->
+        <script>
+            let data = JSON.parse(localStorage.getItem("TProduct4")) || [];
+
+            let h3 = document.querySelector(".right > h3");
+            let q = document.querySelector("#q");
+            let price = document.querySelector("#price");
+            let subtotal = document.querySelector(".subtotal");
+            let shipping = document.querySelector(".shipping");
+            let taxes = document.querySelector(".taxes");
+            let total = document.querySelector(".totall");
+            
+            data.forEach((el, index) => {
+                h3.innerHTML = el.Product;
+                q.innerHTML = el.Quantity;
+                price.innerHTML = el.Price;
+                subtotal.innerHTML = `₹ ` + el.Price + " x " + el.Quantity;
+                total.innerHTML = `₹ ` + el.Total;
+            });           
+        </script>
+    </body>
+</html>
