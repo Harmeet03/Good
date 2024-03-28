@@ -17,7 +17,7 @@ app.use(cors(connection));
 const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-        const request = await fetch("http://localhost:4040/", {
+        const request = await fetch("https://good-wt15.onrender.com/", {
             method: "POST",
             mode: "cors",
             headers: {
