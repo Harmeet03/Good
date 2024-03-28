@@ -7,8 +7,8 @@ mongoDB();
 const cors = require("cors");
 
 const connection = {
-    origin: "http://127.0.0.1:5501"
-    // origin: "https://goodclothing.netlify.app"
+    // origin: "http://127.0.0.1:5501"
+    origin: "https://goodclothing.netlify.app"
 };
 
 const app = express();
@@ -23,8 +23,8 @@ const handleSubmit = async (e) => {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
-                'Access-Control-Allow-Origin': 'http://127.0.0.1:5501'
-                // 'Access-Control-Allow-Origin': 'https://goodclothing.netlify.app'
+                // 'Access-Control-Allow-Origin': 'http://127.0.0.1:5501'
+                'Access-Control-Allow-Origin': 'https://goodclothing.netlify.app'
             }
         });
         if(request.ok){
