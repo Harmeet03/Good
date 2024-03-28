@@ -64,7 +64,7 @@ app.post("/form", async function (req, res) {
         res.status(201).json({ message: "Form submitted successfully", buyer });
     }
     catch(error){
-        console.log(`Error while sending data to form's backend: ${error}`);
+        console.log(`Error while sending data to form's backend (MongoDB): ${error}`);
     }
 });
 
