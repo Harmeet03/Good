@@ -6,7 +6,7 @@ document.getElementById('myForm').addEventListener('submit', async function (eve
         formDataObject[key] = value;
     });
     try {
-        const response = await fetch('http://localhost:4040/form', {
+        const response = await fetch('https://good-wt15.onrender.com/form', {
             method: 'POST',
             mode: "cors",
             headers: {
