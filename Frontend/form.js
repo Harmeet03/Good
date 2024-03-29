@@ -17,12 +17,10 @@ document.getElementById('myForm').addEventListener('submit', async function (eve
         });
 
         if (response.ok) {
-            localStorage.setItem("Connect", "Connect");
             console.log("Form Submitted");
         } 
         else {
             console.log("Form failed");
-            localStorage.setItem("Fail", "Fail");
         }
     } catch (error) {
         console.log(`Error while submitting form ${error}`);
