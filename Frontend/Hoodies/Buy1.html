@@ -51,7 +51,7 @@
                     <input name="pno" class="input" type="number" maxlength="10" placeholder="Phone number" required>
                     <p> The shipping carrier for this order requires a contact number </p><br><br>
                     <button type="submit" class="button" onclick="
-                        if(console.log.toString().includes('Form Submitted')){
+                        if(localStorage.getItem('Connect') !== null){
                             console.log('True');
                         } else{
                             console.log('False');
