@@ -1,5 +1,4 @@
 document.getElementById('myForm').addEventListener('submit', async function (event) {
-    event.preventDefault();
     const formData = new FormData(this);
     const formDataObject = {};
     formData.forEach((value, key) => {
@@ -21,8 +20,10 @@ document.getElementById('myForm').addEventListener('submit', async function (eve
         } 
         else {
             console.log("Form failed");
+            event.preventDefault();
         }
     } catch (error) {
+        event.preventDefault();
         console.log(`Error while submitting form ${error}`);
         let nError = document.getElementById("nError");
         nError.style.display = "block";
