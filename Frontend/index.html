@@ -169,35 +169,33 @@
                 <a class="fa fa-twitter fa-2x "></a>
                 <a class="fa fa-instagram fa-2x"></a>
                 <a class="fa fa-youtube fa-2x"></a>
-                <!-- <div onclick="theme()">
+                <div onclick="theme()">
                     <a id="on" style="display: none;" class="fa fa-toggle-on fa-2x"></a>
                     <a id="off" class="fa fa-toggle-off fa-2x"></a>
-                </div> -->
+                </div>
             </div>
         </div>
         <h4> © 2024 'GOOD' CLOTHES BY HARMEET </h1>
     </footer>
-    <!-- <script>
+    <script>
         function theme(){
             let off = document.getElementById("off");
             let on = document.getElementById("on");
             let body = document.querySelector("body");
-
-            if(body.style.backgroundColor == "black"){
-                body.style.backgroundColor = "white";
-            }
-            else{
-                body.style.backgroundColor = "black";
-            }
+            const darkMode = localStorage.getItem("darkTheme") === "on";
             
-            if(off.style.display == "block"){
+            if(darkMode){
+                body.style.backgroundColor = "white";
+                localStorage.setItem("darkTheme", "off");
                 off.style.display = "none";
                 on.style.display = "block";
             }
             else{
+                body.style.backgroundColor = "black";
+                localStorage.setItem("darkTheme", "on");
                 off.style.display = "block";
                 on.style.display = "none";
             }
         }
-    </script> -->
+    </script>
 </html>
