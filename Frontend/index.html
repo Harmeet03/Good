@@ -177,25 +177,5 @@
         </div>
         <h4> © 2024 'GOOD' CLOTHES BY HARMEET </h1>
     </footer>
-    <script>
-        function theme(){
-            let off = document.getElementById("off");
-            let on = document.getElementById("on");
-            let body = document.querySelector("body");
-            const darkMode = localStorage.getItem("darkTheme") === "on";
-            
-            if(darkMode){
-                body.style.backgroundColor = "white";
-                localStorage.setItem("darkTheme", "off");
-                off.style.display = "none";
-                on.style.display = "block";
-            }
-            else{
-                body.style.backgroundColor = "black";
-                localStorage.setItem("darkTheme", "on");
-                off.style.display = "block";
-                on.style.display = "none";
-            }
-        }
-    </script>
+    <script src="theme.js"></script>
 </html>
